@@ -114,7 +114,7 @@ CAPTCHAs have become sophisticated enough to distinguish between clicks from a r
 
 ### Approach #3: Integrate an Antibot Browser
 
-The previous two CAPTCHA bypass approaches rely on too many assumptions. A more efficient solution is to configure Cypress to control an anti-detect browser.
+The previous two CAPTCHA bypass approaches rely on too many assumptions. A more efficient solution is to configure Cypress to control [anti-detect browsers](https://brightdata.com/blog/proxy-101/best-antidetect-browsers).
 
 By default, Cypress provides access to one of the locally installed browsers from the [following list](https://docs.cypress.io/guides/guides/launching-browsers#Browsers):
 
