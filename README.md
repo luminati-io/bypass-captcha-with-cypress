@@ -25,13 +25,13 @@ Popular CAPTCHA providers include **Google reCAPTCHA, hCaptcha,** and **BotDetec
 - **Audio-based CAPTCHAs** – Users must type the words they hear from an audio clip.  
 - **Puzzle CAPTCHAs** – Users solve simple challenges, such as clicking a specific object or answering a question.  
 
-![Puzzle CAPTCHA example](https://brightdata.com/wp-content/uploads/2024/07/Puzzle-CAPTCHA-example-1.png)
+![Puzzle CAPTCHA example](https://github.com/luminati-io/bypass-captcha-with-cypress/blob/main/images/Puzzle-CAPTCHA-example-1.png)
 
 ### How CAPTCHAs Are Used
 
 CAPTCHAs are often integrated into critical user flows, such as form submissions, to prevent bots from completing actions automatically:  
 
-![CAPTCHA in form submission process](https://brightdata.com/wp-content/uploads/2024/07/CAPTCHA-as-a-step-of-a-form-submission-process-example.png)
+![CAPTCHA in form submission process](https://github.com/luminati-io/bypass-captcha-with-cypress/blob/main/images/CAPTCHA-as-a-step-of-a-form-submission-process-example.png)
 
 In these cases, the CAPTCHA is always displayed and cannot be bypassed using simple automation techniques. Some CAPTCHA-solving services use human operators or specialized AI models to solve these challenges in real time, but hardcoded CAPTCHAs are relatively rare due to their negative impact on user experience.
 
@@ -39,7 +39,7 @@ In these cases, the CAPTCHA is always displayed and cannot be bypassed using sim
 
 More commonly, CAPTCHAs are part of advanced anti-bot systems, such as Web Application Firewalls (WAFs) ([Learn More](https://www.cloudflare.com/learning/ddos/glossary/web-application-firewall-waf/)):  
 
-![Web Application Firewall example](https://brightdata.com/wp-content/uploads/2024/07/Example-of-a-Web-Application-Firewall-1024x488.png)
+![Web Application Firewall example](https://github.com/luminati-io/bypass-captcha-with-cypress/blob/main/images/Example-of-a-Web-Application-Firewall-1024x488.png)
 
 In such systems, CAPTCHAs are dynamically triggered when the website suspects the user might be a bot. This means they can sometimes be avoided by making the bot behave more like a real human—such as using a real browser and mimicking human interactions.
 
@@ -70,7 +70,7 @@ For example, with reCAPTCHA v3, you can create a separate key for testing enviro
 
 While using these keys, you will always get a reCAPTCHA “No CAPTCHA” widget as below:
 
-![](https://developers.google.com/static/recaptcha/images/recaptcha_test.png)
+![](https://github.com/luminati-io/bypass-captcha-with-cypress/blob/main/images/recaptcha_test.png)
 
 This setup will display a special warning message to indicate that the CAPTCHA is not meant for production use. Automating a click on this message ensures that the anti-bot verification always passes. More details can be found in the [reCAPTCHA documentation](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do).
 
@@ -80,13 +80,13 @@ Other CAPTCHA providers offer similar options for test environments.
 
 Some CAPTCHAs require only basic interactions, such as clicking a checkbox, as seen in the reCAPTCHA “No CAPTCHA” widget.  
 
-![Simple clicking CAPTCHA example](https://brightdata.com/wp-content/uploads/2024/07/Simple-clicking-CAPTCHA-example.png)
+![Simple clicking CAPTCHA example](https://github.com/luminati-io/bypass-captcha-with-cypress/blob/main/images/Simple-clicking-CAPTCHA-example.png)
 
 While these challenges may appear simple, they often analyze mouse movements and other behavioral signals to verify if the user is human. However, not all CAPTCHAs are this advanced. Some are designed to block only basic bots and can be easier to bypass. In such cases, it may be possible to automate them using Cypress logic.  
 
 Inspecting the CAPTCHA element from the example above reveals that it is embedded within an iframe.
 
-![Inspecting the CAPTCHA element](https://brightdata.com/wp-content/uploads/2024/07/Inspecting-the-CAPTCHA-element-1024x510.png)
+![Inspecting the CAPTCHA element](https://github.com/luminati-io/bypass-captcha-with-cypress/blob/main/images/Inspecting-the-CAPTCHA-element-1024x510.png)
 
 This is a common behavior for most CAPTCHA providers.
 
